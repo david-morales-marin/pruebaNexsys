@@ -20,7 +20,7 @@ public class ProductoControllers {
         this.productoService = productoService;
     }
 
-    @GetMapping("/products/")
+    @GetMapping("/products")
     public List<Producto> getAllProducts(){
         return this.productoService.getAllProduct();
     }
