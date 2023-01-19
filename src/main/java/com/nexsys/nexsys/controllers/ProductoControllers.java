@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 @RestController
-@RequestMapping("/nexsys")
+@RequestMapping("/nexsys/v1")
 public class ProductoControllers {
 
     @Autowired
@@ -20,23 +20,23 @@ public class ProductoControllers {
         this.productoService = productoService;
     }
 
-    @GetMapping("/v1/products/")
+    @GetMapping("/products/")
     public List<Producto> getAllProducts(){
         return this.productoService.getAllProduct();
     }
 
-    @GetMapping("/v1/products/{pid}")
+    @GetMapping("/products/{pid}")
     public Optional<Producto> getProduct(@PathVariable("pid") int pid){
         return this.productoService.getProduct(pid);
     }
 
-    @PostMapping("/v1/categories/")
-    public Producto CreateAProduct(@RequestBody Producto producto){
+    @PostMapping("/products/")
+    public Producto createAProduct(@RequestBody Producto producto){
         return this.productoService.createAProduct(producto);
     }
 
-    @DeleteMapping("/v1/eliminar/{pid}")
-    public String EliminarProducto(@PathVariable("pid") int pid){
+    @DeleteMapping("/eliminar/{pid}")
+    public String eliminarProducto(@PathVariable("pid") int pid){
         this.productoService.eliminarProducto(pid);
         return " Se ha eliminado un registro ";
     }

@@ -1,7 +1,5 @@
 package com.nexsys.nexsys.entities;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
 import java.io.Serializable;
 import javax.persistence.*;
 

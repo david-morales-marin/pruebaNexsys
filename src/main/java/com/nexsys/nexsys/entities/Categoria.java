@@ -1,7 +1,5 @@
 package com.nexsys.nexsys.entities;
 
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
